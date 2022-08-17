@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Functional Baper Bank</title>
+</head>
+
+<body class="bg-blue-600">
+    <header>
+        <h1 class="text-5xl text-center mt-12 text-white">Functional <span
+                class="text-amber-400 font-medium">Baap-Er-Bank</span>!!!
+        </h1>
+    </header>
+    <main>
+        <!-- Balance and transactions -->
+        <section class="mt-12">
+            <div class="grid lg:grid-cols-3 sm:grid-cols-1 gap-4 w-3/4 mx-auto  ">
+                <!-- deposit -->
+                <div class="bg-yellow-500 p-8 rounded-2xl shadow-xl hover:translate-x-1 transition">
+                    <h4 class="text-2xl text-white font-semibold">
+                        Deposit
+                    </h4>
+                    <h2 class="text-4xl text-white">
+                        $<span id="deposit-total">00</span>
+                    </h2>
+                </div>
+                <!-- withdraw -->
+                <div class="bg-blue-500 p-8 rounded-2xl shadow-xl hover:translate-x-1 transition">
+                    <h4 class="text-2xl text-white font-semibold">
+                        Withdraw
+                    </h4>
+                    <h2 class="text-4xl text-white">
+                        $<span id="withdraw-total">00</span>
+                    </h2>
+                </div>
+                <!-- balance -->
+                <div class="bg-red-500 p-8 rounded-2xl shadow-xl hover:translate-x-1 transition">
+                    <h4 class="text-2xl text-white font-semibold">
+                        Balance
+                    </h4>
+                    <h2 class="text-4xl text-white">
+                        $<span id="balance-total">1240</span>
+                    </h2>
+                </div>
+
+            </div>
+        </section>
+        <!-- deposit and withdraw -->
+        <section class="mt-12 w-3/4 mx-auto">
+            <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-4">
+                <!-- Deposit amount -->
+                <div class="bg-violet-400 p-10 rounded-2xl transition hover:translate-x-1">
+                    <h3 class="text-4xl text-white mb-4 font-semibold">Your Deposit</h3>
+                    <input id="deposit-field" class="w-3/4 rounded px-4 py-2" placeholder="$ Amount you want to deposit"
+                        type="text">
+                    <button id="btn-deposit"
+                        class="block mt-4 bg-red-500 p-3 rounded-xl text-white hover:bg-red-700 transition hover:p-4 hover:font-semibold">Deposit</button>
+                </div>
+                <!-- withdraw amount -->
+                <div class="bg-green-400 p-10 rounded-2xl transition hover:translate-x-1">
+                    <h3 class="text-4xl text-white mb-4 font-semibold">Your Withdraw</h3>
+                    <input id="withdraw-field" class="w-3/4 rounded px-4 py-2"
+                        placeholder="$ Amount you want to withdraw" type="text">
+                    <button id="btn-withdraw"
+                        class="block mt-4 bg-yellow-500 p-3 rounded-xl text-white hover:bg-yellow-700 transition hover:p-4 hover:font-semibold">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+
+
+</body>
+
+</html>
